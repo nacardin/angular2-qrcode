@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git+https://github.com/SuperiorJT/angular2-qrcode.git"
   },
-  "scripts": { },
+  "scripts": {},
   "keywords": [
     "qrcode",
     "qr",
@@ -18,7 +18,7 @@
     "ng2"
   ],
   "dependencies": {
-    "qrcode-generator": "^1.0.0"
+    "qrcode-generator": "git+https://github.com/nacardin/qrcode-generator.git"
   },
   "peerDependencies": {
     "@angular/core": "^2.0.0"

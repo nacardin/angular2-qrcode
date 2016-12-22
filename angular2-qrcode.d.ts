@@ -6,6 +6,8 @@ export declare class QRCodeComponent implements OnChanges {
     size: number;
     type: number;
     level: string;
+    fgColor: string;
+    bgColor: string;
     constructor(elementRef: ElementRef);
     generate(): void;
 }

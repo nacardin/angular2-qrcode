@@ -24,14 +24,20 @@ export class QRCodeComponent implements OnChanges {
     @Input() size: number = 128;
     @Input() type: number = 4;
     @Input() level: string = 'M';
-
+    @Input() fgColor: string = '#000000';
+    @Input() bgColor: string = '#FFFFFF';
 
     constructor(private elementRef: ElementRef) {
     }
 
     generate() {
         try {
-            let qr = qrcode(this.type, this.level);
+            let qr = qrcode({
+                typeNumber: this.type,
+                errorCorrectionLevel: this.level,
+                fgColor: parseInt(this.fgColor.substr(1), 16),
+                bgColor: parseInt(this.bgColor.substr(1), 16)
+            });
             qr.addData(this.data);
             qr.make();
 
