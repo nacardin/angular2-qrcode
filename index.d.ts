@@ -1,1 +1,1 @@
-export * from './dist/angular2-qrcode';
+export * from './angular2-qrcode';
