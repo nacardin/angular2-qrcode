@@ -8,9 +8,23 @@
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": false,
-    "declaration": true
+    "declaration": true,
+    "declarationDir": "dist",
+    "outDir": "dist",
+    "lib": [
+      "es6",
+      "dom"
+    ]
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "index.d.ts",
+    "dist"
+  ],
+  "types": [
+    "node"
+  ],
+  "typeRoots": [
+    "node_modules/@types"
   ]
 }
