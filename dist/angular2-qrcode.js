@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,9 +7,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var qrcode = require("qrcode-generator");
-var QRCodeComponent = (function () {
+import { NgModule, Component, Input, ElementRef } from '@angular/core';
+import * as qrcode from "qrcode-generator";
+export var QRCodeComponent = (function () {
     function QRCodeComponent(elementRef) {
         this.elementRef = elementRef;
         this.data = '';
@@ -47,45 +46,44 @@ var QRCodeComponent = (function () {
         }
     };
     __decorate([
-        core_1.Input(), 
+        Input(), 
         __metadata('design:type', String)
     ], QRCodeComponent.prototype, "data", void 0);
     __decorate([
-        core_1.Input(), 
+        Input(), 
         __metadata('design:type', Number)
     ], QRCodeComponent.prototype, "size", void 0);
     __decorate([
-        core_1.Input(), 
+        Input(), 
         __metadata('design:type', Number)
     ], QRCodeComponent.prototype, "type", void 0);
     __decorate([
-        core_1.Input(), 
+        Input(), 
         __metadata('design:type', String)
     ], QRCodeComponent.prototype, "level", void 0);
     __decorate([
-        core_1.Input(), 
+        Input(), 
         __metadata('design:type', String)
     ], QRCodeComponent.prototype, "fgColor", void 0);
     __decorate([
-        core_1.Input(), 
+        Input(), 
         __metadata('design:type', String)
     ], QRCodeComponent.prototype, "bgColor", void 0);
     QRCodeComponent = __decorate([
-        core_1.Component({
+        Component({
             moduleId: 'module.id',
             selector: 'qr-code',
             template: ''
         }), 
-        __metadata('design:paramtypes', [core_1.ElementRef])
+        __metadata('design:paramtypes', [ElementRef])
     ], QRCodeComponent);
     return QRCodeComponent;
 }());
-exports.QRCodeComponent = QRCodeComponent;
-var QRCodeModule = (function () {
+export var QRCodeModule = (function () {
     function QRCodeModule() {
     }
     QRCodeModule = __decorate([
-        core_1.NgModule({
+        NgModule({
             exports: [QRCodeComponent],
             declarations: [QRCodeComponent],
             entryComponents: [QRCodeComponent]
@@ -94,5 +92,4 @@ var QRCodeModule = (function () {
     ], QRCodeModule);
     return QRCodeModule;
 }());
-exports.QRCodeModule = QRCodeModule;
 //# sourceMappingURL=angular2-qrcode.js.map
