@@ -18,14 +18,12 @@
     "ng2"
   ],
   "dependencies": {
-    "qrcode-generator": "git+https://github.com/nacardin/qrcode-generator.git"
-  },
-  "peerDependencies": {
-    "@angular/core": "^2.0.0"
+    "qrcode-generator": "git+https://github.com/nacardin/qrcode-generator.git#b5ff5e20775ec690d86d8d0f813270175e89e740"
   },
   "devDependencies": {
-    "@angular/core": "^2.0.0",
-    "typescript": "^2.0.0"
+    "@angular/core": "~2.4.1",
+    "rxjs": "~5.0.2",
+    "typescript": "2.0.10"
   },
   "typings": "angular2-qrcode.d.ts",
   "author": "superiorjt <superiorjt@gmail.com>",
